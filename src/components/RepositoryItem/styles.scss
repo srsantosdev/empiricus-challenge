@@ -1,0 +1,25 @@
+.article__card--repository-item {
+  & + .article__card--repository-item {
+    margin-top: 1rem;
+  }
+}
+
+.card__repository-item--info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.card__repository-item--numbers {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+

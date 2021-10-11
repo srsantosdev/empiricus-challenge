@@ -1,0 +1,10 @@
+form.form__search-user {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}

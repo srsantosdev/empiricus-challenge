@@ -1,0 +1,24 @@
+.user-info-component__container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    width: 10rem;
+    height: 10rem;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.5rem;
+  }
+}

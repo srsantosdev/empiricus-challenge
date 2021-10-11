@@ -1,0 +1,48 @@
+@include font-face(
+  'Default Bold',
+  '../assets/fonts/tt_commons_bold',
+  normal,
+  normal,
+  otf
+);
+
+@include font-face(
+  'Default Demi Bold',
+  '../assets/fonts/tt_commons_demibold',
+  normal,
+  normal,
+  otf
+);
+
+@include font-face(
+  'Default Light',
+  '../assets/fonts/tt_commons_light',
+  normal,
+  normal,
+  otf
+);
+
+@include font-face(
+  'Default Medium',
+  '../assets/fonts/tt_commons_medium',
+  normal,
+  normal,
+  otf
+);
+
+@include font-face(
+  'Default Regular',
+  '../assets/fonts/tt_commons_regular',
+  normal,
+  normal,
+  otf
+);
+
+@include font-face(
+  'Source Serif Pro',
+  '../assets/fonts/sourceserifpro_regular',
+  normal,
+  normal,
+  ttf
+);
+@include font-face('Source Serif Pro', '../assets/fonts/sourceserifpro_bold', 700, normal, ttf);

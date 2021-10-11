@@ -1,0 +1,13 @@
+.main-layout__container {
+  min-height: 100vh;
+}
+
+.main-layout__content {
+  width: 100%;
+  max-width: 1140px;
+
+  margin: 0 auto;
+  padding: 0 2.4rem;
+
+  height: calc(100vh - 8rem);
+}
