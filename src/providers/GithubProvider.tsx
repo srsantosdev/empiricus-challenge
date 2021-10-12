@@ -6,6 +6,7 @@ import { User, Repository } from '../types';
 export type GithubContextData = {
   loading: boolean;
   user: User | null;
+  isValidUser: boolean;
   repositories: Repository[];
   enableLoading: () => void;
   disableLoading: () => void;
@@ -18,6 +19,7 @@ export const GithubContext = createContext({} as GithubContextData);
 export const GithubProvider: React.FC = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isValidUser, setIsValidUser] = useState(false);
 
   const [user, setUser] = useState<User | null>(null);
   const [repositories, setRepositories] = useState<Repository[]>([]);
@@ -31,9 +33,18 @@ export const GithubProvider: React.FC = ({ children }) => {
   }
 
   const searchUser = useCallback(async (username: string) => {
+    setIsValidUser(false);
     const userData = await GithubService.getUser(username);
-    setCurrentPage(0);
 
+    if (!userData) {
+      setIsValidUser(false);
+      setUser(null);
+
+      return null;
+    }
+
+    setIsValidUser(true);
+    setCurrentPage(0);
     setUser(userData);
 
     return userData;
@@ -65,6 +76,7 @@ export const GithubProvider: React.FC = ({ children }) => {
         user,
         loading,
         searchUser,
+        isValidUser,
         repositories,
         enableLoading,
         disableLoading,
